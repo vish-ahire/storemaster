@@ -2,7 +2,7 @@ import { LoginForm } from "./component/LoginForm";
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute';
-import {Products}  from "./component/Products";
+import { Products } from "./component/Products";
 import { Orders } from "./component/Orders";
 import Layout from "./component/Layout";
 import { Dashboard } from "./component/Dashboard";
@@ -54,6 +54,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="*" element={<LoginForm />} />
       </Routes>
     </Router >
   );
