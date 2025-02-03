@@ -33,7 +33,9 @@ export const Products = () => {
       setEditableProduct(data);
     },
   });
-
+  if (productDetails) {
+    
+  }
   const updateMutation = useMutation({
     mutationFn: updateProductDetails,
     onSuccess: () => {
