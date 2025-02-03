@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 import store from './app/store';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import ReactModal from 'react-modal';
+import ErrorBoundary from './component/ErrorBoundary';
 
 ReactModal.setAppElement('#root');
 
@@ -14,12 +15,13 @@ const queryClient = new QueryClient();
 
 root.render(
   <>
-    <QueryClientProvider client={queryClient}>
-
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <Provider store={store}>
+          <App />
+        </Provider>
+      </QueryClientProvider>
+    </ErrorBoundary>
 
   </>
 );
