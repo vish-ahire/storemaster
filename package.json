@@ -14,14 +14,13 @@
     "react-modal": "^3.16.3",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.1.3",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-tiny-popover": "^8.1.4",
     "redux": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
-    "builder": "react-scripts build",
-    "build": "react-scripts build && webpack-bundle-analyzer build/static/js/*.js",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -45,7 +44,6 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "tailwindcss": "^3.4.17",
-    "webpack-bundle-analyzer": "^4.10.2"
+    "tailwindcss": "^3.4.17"
   }
 }
